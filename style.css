@@ -9,8 +9,11 @@
 :root {
   --background: #282a36;
   --red: #ff5555;
+  --dark-red: #a83838;
   --yellow: #f1fa8c;
+  --dark-yellow: #959b57;
   --green: #50fa7b;
+  --dark-green: #37b156;
   --foreground: #f8f8f2;
   --currentline: #44475a;
   --term-bg: #121420;
@@ -58,13 +61,25 @@ body {
   background-color: var(--red);
 }
 
+.red:hover {
+  background-color: var(--dark-red);
+}
+
 .blue {
   background-color: var(--yellow);
+}
+
+.blue:hover {
+  background-color: var(--dark-yellow);
 }
 
 .green {
   background-color: var(--green);
 }
+.green:hover {
+  background-color: var(--dark-green);
+}
+
 .text p {
   position: relative;
   display: inline-block;
