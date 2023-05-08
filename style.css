@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css?family=JetBrains+Mono:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+  font-family: "JetBrains Mono", Helvetica, sans-serif;
+  margin: 0px;
+  padding: 0px;
+}
+
+:root {
+  --background: #282a36;
+  --red: #ff5555;
+  --yellow: #f1fa8c;
+  --green: #50fa7b;
+  --foreground: #f8f8f2;
+  --currentline: #44475a;
+}
+
+body {
+  display: flex;
+  background: slategray;
+  color:#f8f8f2;
+  justify-content: center;
+}
+
+.termBackground {
+  position: relative;
+  top: 250px;
+  box-sizing: border-box;
+  background: var(--background);
+  border-radius: 15px;
+  width: 40%;
+  height:  100%;
+  padding-top: 3px;
+  padding-left: 3px;
+  padding-bottom: 15px;
+  min-width: 25em;
+}
+
+.buttonsection {
+  position: relative;
+  background: transparent;
+  display: flex;
+  top: 10px;
+  left: 10px;
+}
+
+.buttons {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  position: relative;
+  margin-right: 3px;
+  margin-bottom: 15px;
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.blue {
+  background-color: var(--yellow);
+}
+
+.green {
+  background-color: var(--green);
+}
+.text p {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.text {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+
+
+/* typing animation properties */
+
+.textcontainer {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+p.typing {
+  border-right: .4em solid var(--foreground); 
+}
+
+p.type1 {
+width: 3.8em;
+-webkit-animation: type 1.5s steps(8, end),blink .4s step-end  alternate;;
+animation: type 1.5s steps(8, end),blink .5s step-end  alternate;;
+-webkit-animation-fill-mode:none;
+animation-fill-mode: forwards;
+}
+
+p.type2 {
+  width: 11em;
+  opacity: 0;
+  -webkit-animation: type2 0.5s steps(30, end);
+  animation: type2 0.5s steps(30, end);
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+p.type22 {
+  width: 13.8em;
+  opacity: 0;
+  -webkit-animation: type2 0.5s steps(30, end);
+  animation: type2 0.5s steps(30, end);
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+p.type3 {
+  width: 12.5em;
+  opacity: 0;
+  -webkit-animation: type3 1.5s steps(20, end), blink .5s step-end infinite alternate;
+  animation: type3 1.5s steps(20, end), blink .5s step-end infinite alternate;
+  -webkit-animation-delay: 2.7s;
+  animation-delay: 3s;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+.prompt {
+  margin-bottom: 5px;
+}
+
+
+.response {
+  display:grid;
+  margin-bottom: 5px;
+}
+
+.hiddenPrompt {
+  opacity: 0;
+  animation: show 0.01s linear forwards;
+  animation-delay: 2.5s;
+}
+
+.c-success {
+  color: #50fa7b;
+}
+
+.c-fail {
+  color:#50fa7b;
+}
+
+
+@keyframes show {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+/* **************************** keyframes **************************************** */
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .4em solid var(--foreground);
+  }
+  100% {
+    border: none;
+  }
+}
+
+@-webkit-keyframes type {
+  0% {
+    width: 0;
+  }
+  99.9% {
+    border-right: .4em solid var(--foreground);
+  }
+  100% {
+    border: none;
+  }
+}
+
+@keyframes type1 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .4em solid var(--foreground);
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@-webkit-keyframes type2 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  99.9% {
+    border-right: .4em solid var(--foreground);
+  }
+  100% {
+    opacity: 1;
+    border: none;
+  }
+}
+
+@keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes type3 {
+  0% {
+    width: 0;
+  }
+  1% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+@-webkit-keyframes blink {
+  50% {
+    border-color: tranparent;
+  }
+}
+/* ************************************************************************* */
+
