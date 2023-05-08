@@ -13,12 +13,13 @@
   --green: #50fa7b;
   --foreground: #f8f8f2;
   --currentline: #44475a;
+  --term-bg: #121420;
 }
 
 body {
   display: flex;
-  background: slategray;
-  color:#f8f8f2;
+  background: var(--background);
+  color: var(--foreground);
   justify-content: center;
 }
 
@@ -26,7 +27,7 @@ body {
   position: relative;
   top: 250px;
   box-sizing: border-box;
-  background: var(--background);
+  background: var(--term-bg);
   border-radius: 15px;
   width: 40%;
   height:  100%;
@@ -109,10 +110,10 @@ p.type2 {
   animation-fill-mode: forwards;
 }
 p.type22 {
-  width: 13.8em;
+  width: 11em;
   opacity: 0;
-  -webkit-animation: type2 0.5s steps(30, end);
-  animation: type2 0.5s steps(30, end);
+  -webkit-animation: type2 0.4s steps(30, end);
+  animation: type2 0.4s steps(30, end);
   -webkit-animation-delay: 2s;
   animation-delay: 2s;
   -webkit-animation-fill-mode: forwards;
